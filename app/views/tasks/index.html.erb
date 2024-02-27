@@ -1,0 +1,14 @@
+<div class="container mt-5">
+<div class="banner" style="background-image: url('https://source.unsplash.com/random/1200x300'); height: 100px; background-size: cover; background-position: center; display: flex; border-radius: 15px; align-items: center">
+<h2 class="text-center text-white p-5" style="font-family: 'Verdana', sans-serif;">My tasks</h2>
+</div>
+<div class="card mt-4" style="background-color: #f7f7f7; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<ul>
+<% @tasks.each do |task|%>
+<li>
+ <%= link_to task.title, task_path(task),  class: "text-dark", style: "text-decoration: none; font-size: 18px; display: block; padding: 10px;" %></li>
+<% end %>
+<%= link_to "Add new task", new_task_path, class: "btn btn-primary mr-2" %>
+</ul>
+</div>
+</div>
